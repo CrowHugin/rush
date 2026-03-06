@@ -6,6 +6,13 @@ void print_col(int x, int y)
 
   i = 0;
 
+  write(1,"-",1);
+  while(i != y-2)
+  {
+    write(1," ",1);
+    i++;
+  }
+  write(1,"-\n",2);
 }
 
 void print_ligne(int y)
@@ -27,12 +34,12 @@ int main(void)
   int x;
   int y;
 
-  x = 3;
-  y = 3;
+  x = 4;
+  y = 4;
 
   print_ligne(y);
-  /*print_col(x, y);
-  print_ligne(y);*/
+  print_col(x, y);
+  print_ligne(y);
 
   return 0;
 }
